@@ -48,4 +48,4 @@ combinedData$subject <- as.factor(combinedData$subject)
 combinedData.melted <- melt(combinedData, id = c("subject", "activity"))
 combinedData.mean <- dcast(combinedData.melted, subject + activity ~ variable, mean)
 
-write.table(combinedData.mean, "tidyDataSet.txt", row.names = TRUE, quote = FALSE)
+write.table(combinedData.mean, "tidyDataSet.txt", row.names = FALSE, quote = FALSE)
